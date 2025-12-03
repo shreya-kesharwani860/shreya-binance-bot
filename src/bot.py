@@ -20,8 +20,8 @@ parser.add_argument('--interval', type=int, default=60)
 parser.add_argument('--chunks', type=int, default=5)
 args = parser.parse_args()
 
-API_KEY = os.getenv('zgEdijg4vDQ7r564Itf2KjZK6OGuXDuy4E1B8Ya2j12J4rj52171xH6NqNI7LcZQ')
-API_SECRET = os.getenv('VwQ1mGiKJKr7Nx1zTNa5QWMbSN9YunI8FbiY2o9H7kt5dztPBmXpEdtHzFSZM03L')
+API_KEY = os.getenv('API_KEY')
+API_SECRET = os.getenv('API_SECRET')
 if not API_KEY or not API_SECRET:
     logger.error('API key/secret not found in environment variables')
     raise SystemExit(1)

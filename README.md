@@ -1,33 +1,96 @@
-## Setup
+# Binance Futures Trading Bot
 
-1. Create a Binance Futures Testnet account and get API key & secret.
-2. Set environment variables:
+## Overview
+This is a CLI-based trading bot for Binance USDT-M Futures. The bot supports **market orders**, **limit orders**, and **TWAP orders**. It includes logging, validation, and error handling to ensure safe and structured trading.
+
+---
+
+## Features
+
+- **Market Orders:** Buy or sell immediately at the current market price.
+- **Limit Orders:** Place an order at a specific price.
+- **TWAP Orders:** Split a large order into smaller chunks executed over time intervals.
+- **Logging:** All actions, API requests, and errors are logged in `bot.log`.
+- **Validation:** Validates symbol, order side, quantity, and price input.
+
+---
+
+## Installation
+
+1. Clone the repository:
 
 ```bash
-export BINANCE_API_KEY="your_key"
-export BINANCE_API_SECRET="your_secret"
-````
+git clone https://github.com/<your_username>/<repo_name>.git
+cd <repo_name>
+Create and activate a virtual environment:
 
-3. Install requirements:
+bash
+Copy code
+python -m venv venv
+source venv/bin/activate   # Linux/Mac
+venv\Scripts\activate      # Windows
+Install dependencies:
 
-```bash
-python -m pip install -r requirements.txt
-```
+bash
+Copy code
+pip install -r requirements.txt
+Create a .env file in the project root with your Binance API credentials:
 
-4. Usage examples:
+env
+Copy code
+API_KEY=your_api_key_here
+API_SECRET=your_api_secret_here
+TESTNET_BASE_URL=https://testnet.binancefuture.com
+Usage
+Run the CLI interface:
 
-```bash
-python src/bot.py MARKET BTCUSDT BUY 0.001
-python src/bot.py LIMIT BTCUSDT SELL 0.001 --price 60000
-python src/bot.py OCO BTCUSDT SELL 0.001 --price 65000 --stop_price 59000
-python src/bot.py TWAP BTCUSDT BUY 0.01 --chunks 5 --interval 60
-```
+bash
+Copy code
+python -m src.cli
+Follow the interactive menu:
 
-## Notes
+Market Order
 
-* The bot uses Binance Futures Testnet base URL and `futures_create_order` endpoints.
-* Logs are written to `bot.log`.
+Limit Order
 
-zgEdijg4vDQ7r564Itf2KjZK6OGuXDuy4E1B8Ya2j12J4rj52171xH6NqNI7LcZQ
+TWAP Order
 
-VwQ1mGiKJKr7Nx1zTNa5QWMbSN9YunI8FbiY2o9H7kt5dztPBmXpEdtHzFSZM03L
+Example inputs:
+
+Symbol: BTCUSDT
+
+Side: BUY or SELL
+
+Quantity: 0.002
+
+Limit price: 92300 (for limit orders)
+
+TWAP intervals: 5 (for TWAP)
+
+Interval seconds: 60 (for TWAP)
+
+Project Structure
+css
+Copy code
+[project_root]/
+│
+├── src/
+│   ├── market_orders.py
+│   ├── limit_orders.py
+│   ├── cli.py
+│   └── advanced/
+│       ├── twap.py
+│
+├── bot.log
+├── README.md
+├── report.pdf (optional)
+└── requirements.txt
+Logging
+All API requests, executions, and errors are logged in bot.log with timestamps for easy tracking.
+
+Notes
+Do NOT commit your .env file containing API keys to GitHub.
+
+This bot uses the Binance Testnet by default.
+
+Ensure Python 3.11+ is installed.
