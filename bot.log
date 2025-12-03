@@ -1,0 +1,652 @@
+2025-12-03 20:57:34,646 ERROR MARKET order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\market_orders.py", line 9, in place_market_order
+    resp = client.futures_create_order(symbol=symbol, side=side, type='MARKET', quantity=quantity)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\client.py", line 7782, in futures_create_order
+    return self._request_futures_api("post", "order", True, data=params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\client.py", line 128, in _request_futures_api
+    return self._request(method, uri, signed, force_params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\client.py", line 91, in _request
+    return self._handle_response(self.response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\client.py", line 100, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2025-12-03 21:00:05,603 ERROR MARKET order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\market_orders.py", line 9, in place_market_order
+    resp = client.futures_create_order(symbol=symbol, side=side, type='MARKET', quantity=quantity)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\client.py", line 7782, in futures_create_order
+    return self._request_futures_api("post", "order", True, data=params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\client.py", line 128, in _request_futures_api
+    return self._request(method, uri, signed, force_params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\client.py", line 91, in _request
+    return self._handle_response(self.response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\client.py", line 100, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2025-12-03 21:14:58,873 ERROR MARKET order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\market_orders.py", line 22, in place_market_order
+    resp = self.client.new_order(symbol=symbol, side=side.upper(), type='MARKET', quantity=quantity)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -4164, "Order's notional must be no smaller than 100 (unless you choose reduce only).", {'Content-Type': 'application/json', 'Content-Length': '100', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:44:58 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '1', 'x-mbx-order-count-1m': '1', 'x-response-time': '5ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 66928ca3d45ceb65a68fa61bc198f4fa.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': '70sBNpMcm71e9FJDQvLD0eY37MYoX7qiGie-6d8gS9fB0AzyMnZsKQ=='})
+2025-12-03 21:14:58,873 ERROR MARKET order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\market_orders.py", line 22, in place_market_order
+    resp = self.client.new_order(symbol=symbol, side=side.upper(), type='MARKET', quantity=quantity)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -4164, "Order's notional must be no smaller than 100 (unless you choose reduce only).", {'Content-Type': 'application/json', 'Content-Length': '100', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:44:58 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '1', 'x-mbx-order-count-1m': '1', 'x-response-time': '5ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 66928ca3d45ceb65a68fa61bc198f4fa.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': '70sBNpMcm71e9FJDQvLD0eY37MYoX7qiGie-6d8gS9fB0AzyMnZsKQ=='})
+2025-12-03 21:14:58,873 ERROR MARKET order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\market_orders.py", line 22, in place_market_order
+    resp = self.client.new_order(symbol=symbol, side=side.upper(), type='MARKET', quantity=quantity)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -4164, "Order's notional must be no smaller than 100 (unless you choose reduce only).", {'Content-Type': 'application/json', 'Content-Length': '100', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:44:58 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '1', 'x-mbx-order-count-1m': '1', 'x-response-time': '5ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 66928ca3d45ceb65a68fa61bc198f4fa.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': '70sBNpMcm71e9FJDQvLD0eY37MYoX7qiGie-6d8gS9fB0AzyMnZsKQ=='})
+2025-12-03 21:15:56,060 INFO MARKET order placed BTCUSDT BUY 0.002 resp={'orderId': 10631867330, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '2oDCrHguHDULYjVQqg83Na', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1764776756009}
+2025-12-03 21:15:56,060 INFO MARKET order placed BTCUSDT BUY 0.002 resp={'orderId': 10631867330, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '2oDCrHguHDULYjVQqg83Na', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1764776756009}
+2025-12-03 21:15:56,060 INFO MARKET order placed BTCUSDT BUY 0.002 resp={'orderId': 10631867330, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': '2oDCrHguHDULYjVQqg83Na', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1764776756009}
+2025-12-03 21:16:32,311 INFO LIMIT order placed BTCUSDT BUY 0.002@63000.0 resp={'orderId': 10631867685, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'h31xHg86Ay1Z2axZmkfpx5', 'price': '63000.00', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1764776792263}
+2025-12-03 21:16:32,311 INFO LIMIT order placed BTCUSDT BUY 0.002@63000.0 resp={'orderId': 10631867685, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'h31xHg86Ay1Z2axZmkfpx5', 'price': '63000.00', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1764776792263}
+2025-12-03 21:16:32,311 INFO LIMIT order placed BTCUSDT BUY 0.002@63000.0 resp={'orderId': 10631867685, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'h31xHg86Ay1Z2axZmkfpx5', 'price': '63000.00', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1764776792263}
+2025-12-03 21:17:28,422 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 22, in place_oco
+    tp = self.client.new_order(symbol=symbol, side=side.upper(), type='LIMIT', quantity=quantity, price=price, timeInForce='GTC')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -4024, "Limit price can't be lower than 87858.95.", {'Content-Type': 'application/json', 'Content-Length': '64', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:47:28 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '1', 'x-mbx-order-count-1m': '1', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 edf9d353e05a39e52d09ba01bac3000a.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': 'JLKm3VdW46luBugwlt8ZyA9pUhVxINwN_UCR8VD3bwrfTGm5hFL8Mw=='})
+2025-12-03 21:17:28,422 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 22, in place_oco
+    tp = self.client.new_order(symbol=symbol, side=side.upper(), type='LIMIT', quantity=quantity, price=price, timeInForce='GTC')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -4024, "Limit price can't be lower than 87858.95.", {'Content-Type': 'application/json', 'Content-Length': '64', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:47:28 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '1', 'x-mbx-order-count-1m': '1', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 edf9d353e05a39e52d09ba01bac3000a.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': 'JLKm3VdW46luBugwlt8ZyA9pUhVxINwN_UCR8VD3bwrfTGm5hFL8Mw=='})
+2025-12-03 21:17:28,422 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 22, in place_oco
+    tp = self.client.new_order(symbol=symbol, side=side.upper(), type='LIMIT', quantity=quantity, price=price, timeInForce='GTC')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -4024, "Limit price can't be lower than 87858.95.", {'Content-Type': 'application/json', 'Content-Length': '64', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:47:28 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '1', 'x-mbx-order-count-1m': '1', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 edf9d353e05a39e52d09ba01bac3000a.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': 'JLKm3VdW46luBugwlt8ZyA9pUhVxINwN_UCR8VD3bwrfTGm5hFL8Mw=='})
+2025-12-03 21:18:18,568 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 25, in place_oco
+    sl = self.client.new_order(symbol=symbol, side=stop_side, type='STOP_MARKET', stopPrice=stopPrice, quantity=quantity)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -2021, 'Order would immediately trigger.', {'Content-Type': 'application/json', 'Content-Length': '55', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:48:18 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '2', 'x-mbx-order-count-1m': '2', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 c04bc92d6d282d028a5ae16314cc9b48.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': 'hVhwqooeoCHSqEmDHORhTqyh5qz1ulIugvcfoMPCbM1WHqZ0frtHBQ=='})
+2025-12-03 21:18:18,568 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 25, in place_oco
+    sl = self.client.new_order(symbol=symbol, side=stop_side, type='STOP_MARKET', stopPrice=stopPrice, quantity=quantity)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -2021, 'Order would immediately trigger.', {'Content-Type': 'application/json', 'Content-Length': '55', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:48:18 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '2', 'x-mbx-order-count-1m': '2', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 c04bc92d6d282d028a5ae16314cc9b48.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': 'hVhwqooeoCHSqEmDHORhTqyh5qz1ulIugvcfoMPCbM1WHqZ0frtHBQ=='})
+2025-12-03 21:18:18,568 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 25, in place_oco
+    sl = self.client.new_order(symbol=symbol, side=stop_side, type='STOP_MARKET', stopPrice=stopPrice, quantity=quantity)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -2021, 'Order would immediately trigger.', {'Content-Type': 'application/json', 'Content-Length': '55', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:48:18 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '2', 'x-mbx-order-count-1m': '2', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 c04bc92d6d282d028a5ae16314cc9b48.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': 'hVhwqooeoCHSqEmDHORhTqyh5qz1ulIugvcfoMPCbM1WHqZ0frtHBQ=='})
+2025-12-03 21:21:41,025 INFO Current BTCUSDT price: 92428.4
+2025-12-03 21:21:41,025 INFO Current BTCUSDT price: 92428.4
+2025-12-03 21:21:41,025 INFO Current BTCUSDT price: 92428.4
+2025-12-03 21:21:41,892 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 42, in place_oco
+    tp = self.client.new_order(
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -4014, 'Price not increased by tick size.', {'Content-Type': 'application/json', 'Content-Length': '56', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:51:41 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '1', 'x-mbx-order-count-1m': '1', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 def392ff4d2e2594c6b8affeeeadc0f4.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': '4Gu-uOFoXyqqhvysV2DLEUFHcy9bbPDPoVOIi8STySyBorTzOIg15A=='})
+2025-12-03 21:21:41,892 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 42, in place_oco
+    tp = self.client.new_order(
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -4014, 'Price not increased by tick size.', {'Content-Type': 'application/json', 'Content-Length': '56', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:51:41 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '1', 'x-mbx-order-count-1m': '1', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 def392ff4d2e2594c6b8affeeeadc0f4.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': '4Gu-uOFoXyqqhvysV2DLEUFHcy9bbPDPoVOIi8STySyBorTzOIg15A=='})
+2025-12-03 21:21:41,892 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 42, in place_oco
+    tp = self.client.new_order(
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -4014, 'Price not increased by tick size.', {'Content-Type': 'application/json', 'Content-Length': '56', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:51:41 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '1', 'x-mbx-order-count-1m': '1', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 def392ff4d2e2594c6b8affeeeadc0f4.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': '4Gu-uOFoXyqqhvysV2DLEUFHcy9bbPDPoVOIi8STySyBorTzOIg15A=='})
+2025-12-03 21:22:45,956 INFO Current BTCUSDT price: 92525.6
+2025-12-03 21:22:45,956 INFO Current BTCUSDT price: 92525.6
+2025-12-03 21:22:45,956 INFO Current BTCUSDT price: 92525.6
+2025-12-03 21:22:46,867 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 61, in place_oco
+    sl = self.client.new_order(
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -2021, 'Order would immediately trigger.', {'Content-Type': 'application/json', 'Content-Length': '55', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:52:46 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '2', 'x-mbx-order-count-1m': '2', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 5d4865914dcf375cc5c26563e3609bac.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': 'BrUL30n3KZG5Kkgn1f-Z1xlJaewQ85w_BEMvE_yI5A1_V8-P3qC-kw=='})
+2025-12-03 21:22:46,867 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 61, in place_oco
+    sl = self.client.new_order(
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -2021, 'Order would immediately trigger.', {'Content-Type': 'application/json', 'Content-Length': '55', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:52:46 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '2', 'x-mbx-order-count-1m': '2', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 5d4865914dcf375cc5c26563e3609bac.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': 'BrUL30n3KZG5Kkgn1f-Z1xlJaewQ85w_BEMvE_yI5A1_V8-P3qC-kw=='})
+2025-12-03 21:22:46,867 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 61, in place_oco
+    sl = self.client.new_order(
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -2021, 'Order would immediately trigger.', {'Content-Type': 'application/json', 'Content-Length': '55', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:52:46 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '2', 'x-mbx-order-count-1m': '2', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 5d4865914dcf375cc5c26563e3609bac.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': 'BrUL30n3KZG5Kkgn1f-Z1xlJaewQ85w_BEMvE_yI5A1_V8-P3qC-kw=='})
+2025-12-03 21:24:28,571 INFO Current BTCUSDT price: 92413.7
+2025-12-03 21:24:28,571 INFO Current BTCUSDT price: 92413.7
+2025-12-03 21:24:28,571 INFO Current BTCUSDT price: 92413.7
+2025-12-03 21:24:32,031 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 71, in place_oco
+    sl = self.client.new_order(
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -2021, 'Order would immediately trigger.', {'Content-Type': 'application/json', 'Content-Length': '55', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:54:32 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '2', 'x-mbx-order-count-1m': '2', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 ed5cb80e20acb3b2e88f0aec3b8524d6.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': 'm7QljfHnOq6Srckc-AWCRuESDMbXJSNye0vXbnWDVknKw0Zev84n1Q=='})
+2025-12-03 21:24:32,031 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 71, in place_oco
+    sl = self.client.new_order(
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -2021, 'Order would immediately trigger.', {'Content-Type': 'application/json', 'Content-Length': '55', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:54:32 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '2', 'x-mbx-order-count-1m': '2', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 ed5cb80e20acb3b2e88f0aec3b8524d6.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': 'm7QljfHnOq6Srckc-AWCRuESDMbXJSNye0vXbnWDVknKw0Zev84n1Q=='})
+2025-12-03 21:24:32,031 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 71, in place_oco
+    sl = self.client.new_order(
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -2021, 'Order would immediately trigger.', {'Content-Type': 'application/json', 'Content-Length': '55', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:54:32 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '2', 'x-mbx-order-count-1m': '2', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 ed5cb80e20acb3b2e88f0aec3b8524d6.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': 'm7QljfHnOq6Srckc-AWCRuESDMbXJSNye0vXbnWDVknKw0Zev84n1Q=='})
+2025-12-03 21:25:28,205 INFO Current BTCUSDT price: 92413.7
+2025-12-03 21:25:28,205 INFO Current BTCUSDT price: 92413.7
+2025-12-03 21:25:28,205 INFO Current BTCUSDT price: 92413.7
+2025-12-03 21:25:31,414 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 71, in place_oco
+    sl = self.client.new_order(
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -2021, 'Order would immediately trigger.', {'Content-Type': 'application/json', 'Content-Length': '55', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:55:31 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '2', 'x-mbx-order-count-1m': '2', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 66928ca3d45ceb65a68fa61bc198f4fa.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': 'v-Tp5dM1iaK6fd8MtiHn4lDEYVxzIbAqY4cnhPhxxD7-EVsjp_PJIQ=='})
+2025-12-03 21:25:31,414 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 71, in place_oco
+    sl = self.client.new_order(
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -2021, 'Order would immediately trigger.', {'Content-Type': 'application/json', 'Content-Length': '55', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:55:31 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '2', 'x-mbx-order-count-1m': '2', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 66928ca3d45ceb65a68fa61bc198f4fa.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': 'v-Tp5dM1iaK6fd8MtiHn4lDEYVxzIbAqY4cnhPhxxD7-EVsjp_PJIQ=='})
+2025-12-03 21:25:31,414 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 71, in place_oco
+    sl = self.client.new_order(
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -2021, 'Order would immediately trigger.', {'Content-Type': 'application/json', 'Content-Length': '55', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:55:31 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '2', 'x-mbx-order-count-1m': '2', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 66928ca3d45ceb65a68fa61bc198f4fa.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': 'v-Tp5dM1iaK6fd8MtiHn4lDEYVxzIbAqY4cnhPhxxD7-EVsjp_PJIQ=='})
+2025-12-03 21:26:32,702 INFO Current BTCUSDT price: 92398.2
+2025-12-03 21:26:32,702 INFO Current BTCUSDT price: 92398.2
+2025-12-03 21:26:32,702 INFO Current BTCUSDT price: 92398.2
+2025-12-03 21:26:39,231 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 60, in place_oco
+    tp = self.client.new_order(
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -1111, 'Precision is over the maximum defined for this asset.', {'Content-Type': 'application/json', 'Content-Length': '76', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:56:39 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '1', 'x-mbx-order-count-1m': '1', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 552ef9e1bb4b4597efa99cce2cd603ac.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': 'KN4JJjLSIhDTf5gH1R-L2w-5tak32zBuY818Y9zRzkM6bK1zA2eG8Q=='})
+2025-12-03 21:26:39,231 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 60, in place_oco
+    tp = self.client.new_order(
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -1111, 'Precision is over the maximum defined for this asset.', {'Content-Type': 'application/json', 'Content-Length': '76', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:56:39 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '1', 'x-mbx-order-count-1m': '1', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 552ef9e1bb4b4597efa99cce2cd603ac.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': 'KN4JJjLSIhDTf5gH1R-L2w-5tak32zBuY818Y9zRzkM6bK1zA2eG8Q=='})
+2025-12-03 21:26:39,231 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 60, in place_oco
+    tp = self.client.new_order(
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -1111, 'Precision is over the maximum defined for this asset.', {'Content-Type': 'application/json', 'Content-Length': '76', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:56:39 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '1', 'x-mbx-order-count-1m': '1', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 552ef9e1bb4b4597efa99cce2cd603ac.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': 'KN4JJjLSIhDTf5gH1R-L2w-5tak32zBuY818Y9zRzkM6bK1zA2eG8Q=='})
+2025-12-03 21:28:22,400 INFO Current BTCUSDT price: 92364.0
+2025-12-03 21:28:22,400 INFO Current BTCUSDT price: 92364.0
+2025-12-03 21:28:22,400 INFO Current BTCUSDT price: 92364.0
+2025-12-03 21:28:24,567 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 79, in place_oco
+    sl = self.client.new_order(
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -1111, 'Precision is over the maximum defined for this asset.', {'Content-Type': 'application/json', 'Content-Length': '76', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:58:24 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '2', 'x-mbx-order-count-1m': '2', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 cfe5a52efc848fe75765db8f2727a822.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': 'HG6ObXYnvroeujlHQMxbk6VkdYyRjwpk2mTTE8drH3C_fftaxO7EgQ=='})
+2025-12-03 21:28:24,567 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 79, in place_oco
+    sl = self.client.new_order(
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -1111, 'Precision is over the maximum defined for this asset.', {'Content-Type': 'application/json', 'Content-Length': '76', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:58:24 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '2', 'x-mbx-order-count-1m': '2', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 cfe5a52efc848fe75765db8f2727a822.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': 'HG6ObXYnvroeujlHQMxbk6VkdYyRjwpk2mTTE8drH3C_fftaxO7EgQ=='})
+2025-12-03 21:28:24,567 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 79, in place_oco
+    sl = self.client.new_order(
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -1111, 'Precision is over the maximum defined for this asset.', {'Content-Type': 'application/json', 'Content-Length': '76', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:58:24 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '2', 'x-mbx-order-count-1m': '2', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 cfe5a52efc848fe75765db8f2727a822.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': 'HG6ObXYnvroeujlHQMxbk6VkdYyRjwpk2mTTE8drH3C_fftaxO7EgQ=='})
+2025-12-03 21:29:39,718 INFO Current BTCUSDT price: 92303.4
+2025-12-03 21:29:39,718 INFO Current BTCUSDT price: 92303.4
+2025-12-03 21:29:39,718 INFO Current BTCUSDT price: 92303.4
+2025-12-03 21:29:41,030 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 76, in place_oco
+    sl = self.client.new_order(
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -1111, 'Precision is over the maximum defined for this asset.', {'Content-Type': 'application/json', 'Content-Length': '76', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:59:40 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '2', 'x-mbx-order-count-1m': '2', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 f0f8e23c6013e314a14b46155fbdf3c8.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': 'GCNtIXTtNiXa8SfcE4NAaiLe57cwoa1KfsCwq2IC67PC15voECEMKg=='})
+2025-12-03 21:29:41,030 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 76, in place_oco
+    sl = self.client.new_order(
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -1111, 'Precision is over the maximum defined for this asset.', {'Content-Type': 'application/json', 'Content-Length': '76', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:59:40 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '2', 'x-mbx-order-count-1m': '2', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 f0f8e23c6013e314a14b46155fbdf3c8.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': 'GCNtIXTtNiXa8SfcE4NAaiLe57cwoa1KfsCwq2IC67PC15voECEMKg=='})
+2025-12-03 21:29:41,030 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 76, in place_oco
+    sl = self.client.new_order(
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -1111, 'Precision is over the maximum defined for this asset.', {'Content-Type': 'application/json', 'Content-Length': '76', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 15:59:40 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '2', 'x-mbx-order-count-1m': '2', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 f0f8e23c6013e314a14b46155fbdf3c8.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': 'GCNtIXTtNiXa8SfcE4NAaiLe57cwoa1KfsCwq2IC67PC15voECEMKg=='})
+2025-12-03 21:32:05,106 INFO Current BTCUSDT price: 92350.60
+2025-12-03 21:32:05,106 INFO Current BTCUSDT price: 92350.60
+2025-12-03 21:32:05,106 INFO Current BTCUSDT price: 92350.60
+2025-12-03 21:32:07,032 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 72, in place_oco
+    sl = self.client.new_order(
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -2021, 'Order would immediately trigger.', {'Content-Type': 'application/json', 'Content-Length': '55', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 16:02:07 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '2', 'x-mbx-order-count-1m': '2', 'x-response-time': '38ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 f8b41c9f43d72af954aa011b11abe7b6.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': '4biz-klMj9pqQl1VuqCHzv7lHqZympFmWcINqFb_kb8OJOazcizPQg=='})
+2025-12-03 21:32:07,032 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 72, in place_oco
+    sl = self.client.new_order(
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -2021, 'Order would immediately trigger.', {'Content-Type': 'application/json', 'Content-Length': '55', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 16:02:07 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '2', 'x-mbx-order-count-1m': '2', 'x-response-time': '38ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 f8b41c9f43d72af954aa011b11abe7b6.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': '4biz-klMj9pqQl1VuqCHzv7lHqZympFmWcINqFb_kb8OJOazcizPQg=='})
+2025-12-03 21:32:07,032 ERROR OCO order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\advanced\oco.py", line 72, in place_oco
+    sl = self.client.new_order(
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -2021, 'Order would immediately trigger.', {'Content-Type': 'application/json', 'Content-Length': '55', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 16:02:07 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-mbx-order-count-10s': '2', 'x-mbx-order-count-1m': '2', 'x-response-time': '38ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 f8b41c9f43d72af954aa011b11abe7b6.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': '4biz-klMj9pqQl1VuqCHzv7lHqZympFmWcINqFb_kb8OJOazcizPQg=='})
+2025-12-03 21:33:39,992 INFO Current BTCUSDT price: 92315.1
+2025-12-03 21:33:39,992 INFO Current BTCUSDT price: 92315.1
+2025-12-03 21:33:39,992 INFO Current BTCUSDT price: 92315.1
+2025-12-03 21:33:40,421 INFO OCO placed BTCUSDT SELL 0.002 TP=91853.5 SL=92776.6 resp={tp: {'orderId': 10631873506, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'xYHuza0pjfD8MirlbvXdFx', 'price': '91853.50', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1764777820130}, sl: {'orderId': 10631873508, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'ioxmQPCTLW1XI38UsL0KDZ', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'STOP_MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '92776.60', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'STOP_MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1764777820371}}
+2025-12-03 21:33:40,421 INFO OCO placed BTCUSDT SELL 0.002 TP=91853.5 SL=92776.6 resp={tp: {'orderId': 10631873506, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'xYHuza0pjfD8MirlbvXdFx', 'price': '91853.50', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1764777820130}, sl: {'orderId': 10631873508, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'ioxmQPCTLW1XI38UsL0KDZ', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'STOP_MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '92776.60', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'STOP_MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1764777820371}}
+2025-12-03 21:33:40,421 INFO OCO placed BTCUSDT SELL 0.002 TP=91853.5 SL=92776.6 resp={tp: {'orderId': 10631873506, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'xYHuza0pjfD8MirlbvXdFx', 'price': '91853.50', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1764777820130}, sl: {'orderId': 10631873508, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'ioxmQPCTLW1XI38UsL0KDZ', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'STOP_MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '92776.60', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'STOP_MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1764777820371}}
+2025-12-03 21:34:14,432 INFO Current BTCUSDT price: 92254.3
+2025-12-03 21:34:14,432 INFO Current BTCUSDT price: 92254.3
+2025-12-03 21:34:14,432 INFO Current BTCUSDT price: 92254.3
+2025-12-03 21:34:15,028 INFO OCO placed BTCUSDT BUY 0.002 TP=92715.5 SL=91793.0 resp={tp: {'orderId': 10631873749, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'qnES3bTw8183BxCpKFB9kf', 'price': '92715.50', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1764777854562}, sl: {'orderId': 10631873754, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'SGKgczAJrg2IY3X1xstDGB', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'STOP_MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '91793.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'STOP_MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1764777854985}}
+2025-12-03 21:34:15,028 INFO OCO placed BTCUSDT BUY 0.002 TP=92715.5 SL=91793.0 resp={tp: {'orderId': 10631873749, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'qnES3bTw8183BxCpKFB9kf', 'price': '92715.50', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1764777854562}, sl: {'orderId': 10631873754, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'SGKgczAJrg2IY3X1xstDGB', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'STOP_MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '91793.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'STOP_MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1764777854985}}
+2025-12-03 21:34:15,028 INFO OCO placed BTCUSDT BUY 0.002 TP=92715.5 SL=91793.0 resp={tp: {'orderId': 10631873749, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'qnES3bTw8183BxCpKFB9kf', 'price': '92715.50', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1764777854562}, sl: {'orderId': 10631873754, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'SGKgczAJrg2IY3X1xstDGB', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'STOP_MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '91793.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'STOP_MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1764777854985}}
+2025-12-03 21:46:26,385 ERROR MARKET order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\market_orders.py", line 22, in place_market_order
+    resp = self.client.new_order(symbol=symbol, side=side.upper(), type='MARKET', quantity=quantity)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (401, -2014, 'API-key format invalid.', {'Content-Type': 'application/json', 'Content-Length': '46', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 16:16:26 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 ba219ee4d2ac057688daa3920c76f6b4.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': 'Cgxqw6ZswLoArKLGbIQCUlhF6a7f5VqXSYh30MSu0JBHZ6Mnr4EzVg=='})
+2025-12-03 21:46:26,385 ERROR MARKET order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\market_orders.py", line 22, in place_market_order
+    resp = self.client.new_order(symbol=symbol, side=side.upper(), type='MARKET', quantity=quantity)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (401, -2014, 'API-key format invalid.', {'Content-Type': 'application/json', 'Content-Length': '46', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 16:16:26 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 ba219ee4d2ac057688daa3920c76f6b4.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': 'Cgxqw6ZswLoArKLGbIQCUlhF6a7f5VqXSYh30MSu0JBHZ6Mnr4EzVg=='})
+[2025-12-03 21:46:26,385] ERROR: MARKET order failed
+Traceback (most recent call last):
+  File "C:\Users\shrey\OneDrive\Desktop\Code\.vscode\binance\src\market_orders.py", line 22, in place_market_order
+    resp = self.client.new_order(symbol=symbol, side=side.upper(), type='MARKET', quantity=quantity)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\um_futures\account.py", line 116, in new_order
+    return self.sign_request("POST", url_path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload, special)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 118, in send_request
+    self._handle_exception(response)
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\site-packages\binance\api.py", line 172, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (401, -2014, 'API-key format invalid.', {'Content-Type': 'application/json', 'Content-Length': '46', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Dec 2025 16:16:26 GMT', 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS', 'Server': 'Bengine', 'x-mbx-used-weight-1m': '-1', 'x-response-time': '0ms', 'Access-Control-Allow-Origin': '*', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 ba219ee4d2ac057688daa3920c76f6b4.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'BOM78-P8', 'X-Amz-Cf-Id': 'Cgxqw6ZswLoArKLGbIQCUlhF6a7f5VqXSYh30MSu0JBHZ6Mnr4EzVg=='})
